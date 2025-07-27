@@ -1,127 +1,84 @@
-Trackly - Responsive Expense Tracker
+<h1 align="center">💸 Trackly – Responsive Expense Tracker</h1>
 
-Overview
-Trackly is a lightweight, responsive expense tracking web application built with pure HTML, CSS, and JavaScript. It allows users to log, view, and manage personal expenses with a clean, intuitive interface that works across all devices.
+<p align="center">
+  <b>A clean, responsive, and modern expense tracker built with HTML, CSS, and JavaScript</b><br>
+  🧾 Log expenses • 📱 Mobile-first • 🌙 Dark/Light mode • 💾 Offline support via localStorage
+</p>
 
-Features
-Expense Management
+---
 
-Add expenses with title, amount, and category
+## 🚀 Live Demo
 
-Delete individual expenses
+> Coming soon – deploy with [Netlify](https://netlify.com), or GitHub Pages.
 
-View all expenses in a scrollable list
+---
 
-Automatic expense summary calculations
+## ✨ Features
 
-Data Visualization
+✅ Responsive layout using **Flexbox** and **Grid**  
+✅ Add, delete, and track **expense entries**  
+✅ Live **total expense calculation**  
+✅ Toggle between **Dark/Light mode**  
+✅ Data **persisted in localStorage**  
+✅ Fully functional **offline in-browser app**
 
-Interactive doughnut chart showing expenses by category
+---
 
-Real-time updates when adding/deleting expenses
+## 📂 Project Structure
 
-Data Persistence
-
-LocalStorage integration to save expenses between sessions
-
-Theme preference saved in localStorage
-
-Export Functionality
-
-Export all expenses to CSV format for external analysis
-
-Dark/Light Mode
-
-Toggle between light and dark themes
-
-Automatic theme detection based on system preferences
-
-Responsive Design
-
-Fully responsive layout that works on mobile, tablet, and desktop
-
-Modern CSS layout using Grid and Flexbox
-
-Technologies Used
-HTML5 (Semantic markup)
-
-CSS3 (Variables, Grid, Flexbox, Media Queries)
-
-Vanilla JavaScript (ES6+)
-
-Chart.js (For data visualization)
-
-Font Awesome (For icons)
-
-Installation
-No installation required! Trackly runs entirely in the browser. Simply:
-
-Download the repository files
-
-Open index.html in your preferred browser
-
-Alternatively, you can host the files on any web server.
-
-Usage
-Add an Expense
-
-Fill in the title, amount, and category
-
-Click "Add Expense"
-
-View Expenses
-
-All expenses appear in the Recent Expenses section
-
-Expenses are sorted by date (newest first)
-
-Delete an Expense
-
-Click the trash icon next to any expense
-
-Confirm deletion when prompted
-
-Toggle Theme
-
-Click the theme toggle in the header to switch between light/dark modes
-
-Export Data
-
-Click the "Export" button to download all expenses as a CSV file
-
-Development
-To modify or extend Trackly:
-
-Clone the repository
-
-Edit the respective files:
-
-index.html for structure
-
-style.css for styling
-
-script.js for functionality
-
-Future Improvements
-Add date filtering (monthly/weekly views)
-
-Implement category-based filtering
-
-Add budget tracking functionality
-
-PWA support for offline use
-
-Enhanced accessibility features
-
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
-
-License
-This project is open source and available under the MIT License.
-
-Developer
-Samiullah Samejo
-GitHub: Ubaidicoding
+```text
+📁 Trackly/
+├── 📄 index.html      # HTML markup and structure
+├── 🎨 style.css       # CSS for layout, responsiveness, and themes
+└── 🧠 app.js           # Core logic (add/delete, storage, UI updates)
 
 
-Feel free to reach out with any questions or suggestions!
+🛠️ Tech Stack
+HTML5 🏗️
+
+CSS3 🎨
+
+JavaScript (ES6+) ⚙️
+
+Browser APIs (localStorage) 💾
+
+🎯 Objectives
+Build a responsive, mobile-friendly UI
+
+Enable real-time entry and tracking of expenses
+
+Persist expense data across sessions
+
+Maximize UX with visual clarity and accessibility
+
+🧠 Stretch Goals
+📊 Chart-based summaries (e.g., pie/bar with Chart.js)
+
+📥 Export expenses to CSV
+
+🔍 Filter by category/date
+
+💡 PWA support for installable/offline use
+
+♿ Accessibility improvements (keyboard nav, screen readers)
+
+📸 Screenshots
+Add screenshots here using Markdown image tags:
+
+markdown
+Copy
+Edit
+![Mobile View](screenshots/mobile.png)
+![Desktop View](screenshots/desktop.png)
+📃 License
+MIT License © 2025 Samiullah Samejo
+
+🧠 Created By
+Developed as part of a frontend project challenge.
+Want help building your own? Fork this repo and hack away.
+
+vbnet
+Copy
+Edit
+
+Let me know if you want this uploaded to GitHub or a `vercel.json` for quick deploy.

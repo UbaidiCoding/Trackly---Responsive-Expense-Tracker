@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackly - Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-wallet"></i>
+                <h1>Trackly</h1>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="toggle-handle"></span>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <div class="input-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Add Expense</h2>
+                    </div>
+                    <form id="expenseForm">
+                        <div class="form-group">
+                            <label for="expenseTitle">Title</label>
+                            <input type="text" id="expenseTitle" class="form-control" placeholder="Dinner, Groceries, etc." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseAmount">Amount ($)</label>
+                            <input type="number" id="expenseAmount" class="form-control" placeholder="0.00" min="0.01" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseCategory">Category</label>
+                            <select id="expenseCategory" class="form-control" required>
+                                <option value="">Select a category</option>
+                                <option value="food">Food & Dining</option>
+                                <option value="transport">Transportation</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="housing">Housing</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="utilities">Utilities</option>
+                                <option value="health">Health & Fitness</option>
+                                <option value="travel">Travel</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">
+                            <i class="fas fa-plus"></i> Add Expense
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card" style="margin-top: 30px;">
+                    <div class="card-header">
+                        <h2 class="card-title">Summary</h2>
+                    </div>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-value" id="totalExpenses">$0.00</div>
+                            <div class="summary-label">Total Expenses</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-value" id="expenseCount">0</div>
+                            <div class="summary-label">Transactions</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-value" id="avgExpense">$0.00</div>
+                            <div class="summary-label">Avg. per Expense</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-value" id="largestExpense">$0.00</div>
+                            <div class="summary-label">Largest Expense</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="expenseChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expense-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Recent Expenses</h2>
+                        <div class="actions">
+                            <button id="exportBtn" class="btn" style="padding: 8px 15px; width: auto;">
+                                <i class="fas fa-file-export"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="expense-list" id="expenseList">
+                        <div class="empty-state">
+                            <i class="fas fa-receipt"></i>
+                            <h3>No expenses recorded</h3>
+                            <p>Add your first expense to get started</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Trackly &copy; 2025 - Your Personal Expense Tracker | Made By Samiullah Samejo <i class="fas fa-heart" style="color: var(--danger);"></i></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
